@@ -1,0 +1,37 @@
+[BASIC]
+
+# Good variable names which should always be accepted, separated by a comma.
+good-names=f, i, j, k, m, n, s, v, y, ys, df, fp,
+           X, Xs, X_train, X_test, y_train, y_test
+
+# Specify a score threshold to be exceeded before program exits with error.
+fail-under=10
+
+[FORMAT]
+
+# Maximum number of characters on a single line.
+max-line-length=88
+
+
+[MESSAGES CONTROL]
+
+# Disable the message, report, category or checker with the given id(s). You
+# can either give multiple identifier separated by comma (,) or put this option
+# multiple time (only on the command line, not in the configuration file where
+# it should appear only once).
+disable=C0114, E0611, R0903
+
+
+[SIMILARITIES]
+
+# Minimum lines number of a similarity.
+min-similarity-lines=4
+
+# Ignore comments when computing similarities.
+ignore-comments=yes
+
+# Ignore docstrings when computing similarities.
+ignore-docstrings=yes
+
+# Ignore imports when computing similarities.
+ignore-imports=yes
