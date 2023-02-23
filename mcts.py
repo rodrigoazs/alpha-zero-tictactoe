@@ -86,9 +86,27 @@ class Node:
 
     def __repr__(self):
         prior = "{0:.2f}".format(self.prior)
-        return "Node(State: {} Prior: {} Count: {} Value: {})".format(
-            str(self.state), prior, self.visit_count, self.value()
+        return str(
+            {
+                "state": str(self.state),
+                "prior": prior,
+                "count": self.visit_count,
+                "value": float(self.value()),
+                "children": {str(key): value for key, value in self.children.items()},
+            }
         )
+
+    def dict(self):
+        prior = "{0:.2f}".format(self.prior)
+        return {
+            "state": str(self.state),
+            "prior": prior,
+            "count": self.visit_count,
+            "value": float(self.value()),
+            "children": {
+                str(key): value.dict() for key, value in self.children.items()
+            },
+        }
 
 
 class MCTS:
